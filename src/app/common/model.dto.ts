@@ -23,7 +23,7 @@ export interface MeterReading extends Dto {
   meterId: number;
 }
 
-export interface Bill extends Dto {
+export interface PeriodicStatement extends Dto {
   amount: number;
   meterName: string;
   meterId: number;
@@ -34,6 +34,7 @@ export interface UserBill extends Dto {
   periodName: string;
   username: string;
   entries: UserBillEntry;
+  amount: number;
 }
 
 export interface UserBillEntry {
