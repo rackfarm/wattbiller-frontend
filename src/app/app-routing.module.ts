@@ -1,25 +1,24 @@
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
-import {MeterComponent} from './meter/meter.component';
-import {BillingComponent} from './billing/billing.component';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-            imports: [
-              RouterModule.forRoot([
-                {
-                  path: '',
-                  redirectTo: 'meter',
-                  pathMatch: 'full'
-                },
-                {
-                  path: 'meter',
-                  component: MeterComponent
-                },
-                {
-                  path: 'billing',
-                  component: BillingComponent
-                }
-              ])
-            ]
-          })
-export class AppRoutingModule {}
+  imports: [
+    RouterModule.forRoot([
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'billing'
+      },
+      {
+        path: 'billing',
+        loadChildren: () => import('./billing/billing.module').then(m => m.BillingModule)
+      },
+      {
+        path: 'meter',
+        loadChildren: () => import('./meter/meter.module').then(m => m.MeterModule)
+      }
+    ])
+  ]
+})
+export class AppRoutingModule {
+}

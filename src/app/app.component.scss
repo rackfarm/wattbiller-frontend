@@ -1,0 +1,44 @@
+:host {
+  nb-layout-header ::ng-deep nav, nb-layout ::ng-deep .columns {
+    justify-content: center;
+  }
+
+  .header-wrapper, nb-layout-column {
+    width: 1200px;
+  }
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+
+    .logo {
+      height: inherit;
+      display: flex;
+      align-items: center;
+
+      img {
+        max-height: 100%;
+      }
+
+      h1 {
+        margin: 0;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+
+      li {
+        list-style-type: none;
+
+        & + li {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}

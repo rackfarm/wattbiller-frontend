@@ -1,34 +1,32 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import {AppComponent} from './app.component';
-import {MeterComponent} from './meter/meter.component';
-import {BillingComponent} from './billing/billing.component';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatIconModule, MatToolbarModule} from '@angular/material';
-import {RouterModule} from '@angular/router';
-import {AppRoutingModule} from './app-routing.module';
-import {MeterService} from './meter/meter.service';
-import {HttpClientModule} from '@angular/common/http';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { NbButtonModule, NbLayoutModule, NbThemeModule } from '@nebular/theme';
 
 @NgModule({
-            declarations: [
-              AppComponent,
-              MeterComponent,
-              BillingComponent
-            ],
-            imports: [
-              BrowserModule,
-              NoopAnimationsModule,
-              MatToolbarModule,
-              RouterModule,
-              MatIconModule,
-              MatButtonModule,
-              AppRoutingModule,
-              HttpClientModule
-            ],
-            providers: [MeterService],
-            bootstrap: [AppComponent],
-          })
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    NbThemeModule.forRoot(),
+    NbLayoutModule,
+    NbButtonModule,
+    RouterModule,
+    AppRoutingModule,
+    HttpClientModule
+  ],
+  providers: [
+  ],
+  bootstrap: [
+    AppComponent
+  ],
+})
 export class AppModule {
 }

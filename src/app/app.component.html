@@ -1,13 +1,28 @@
-<mat-toolbar color="primary">
-  <span>Wattbiller: It bills you. You'll love it!</span>
-  <a mat-button routerLink="/billing">
-    Billing
-  </a>
-  <a mat-button routerLink="/meter">
-    meter
-  </a>
-</mat-toolbar>
-<router-outlet>
+<nb-layout center>
+  <nb-layout-header fixed>
+    <div class="header-wrapper">
+      <div class="logo">
+        <img src="/assets/wattbiller_logo.svg">
+        <h1>wattbiller</h1>
+      </div>
+      <ul>
+        <li>Billing</li>
+        <li>Meter</li>
+        <li>Debitors</li>
+      </ul>
+    </div>
+  </nb-layout-header>
 
-</router-outlet>
+  <nb-layout-header subheader>
+    <ng-template #subheader></ng-template>
+    <ng-template #titleSubheader let-title>
+      <h2>{{ title }}</h2>
+    </ng-template>
+  </nb-layout-header>
 
+  <nb-layout-column>
+    <main>
+      <router-outlet #outlet></router-outlet>
+    </main>
+  </nb-layout-column>
+</nb-layout>
