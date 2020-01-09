@@ -1,0 +1,9 @@
+<mat-card>
+  <ng-container *ngIf="bills$ | async as bills; else content">
+    <wat-user-bill-list [bills]="bills"></wat-user-bill-list>
+  </ng-container>
+
+  <ng-template #content>
+    <mat-spinner></mat-spinner>
+  </ng-template>
+</mat-card>

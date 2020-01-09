@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-meter',
+  selector: 'wat-meter',
   templateUrl: './meter.component.html',
   styleUrls: ['./meter.component.scss']
 })

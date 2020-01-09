@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+@import 'colors';
+
+$wattbiller-primary: mat-palette($rackfarm-primary);
+$wattbiller-accent: mat-palette($mat-pink);
+$wattbiller-warn: mat-palette($rackfarm-warn);
+
+$wattbiller-theme: mat-light-theme($wattbiller-primary, $wattbiller-accent, $wattbiller-warn);
+
+@include angular-material-theme($wattbiller-theme);

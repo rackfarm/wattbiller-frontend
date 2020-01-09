@@ -4,7 +4,7 @@ import { SubheaderComponentFactoryResolver } from './common/service/subheader-co
 
 
 @Component({
-  selector: 'app-root',
+  selector: 'wat-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

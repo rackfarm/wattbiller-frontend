@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { NbButtonModule, NbLayoutModule, NbThemeModule } from '@nebular/theme';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -15,14 +15,10 @@ import { NbButtonModule, NbLayoutModule, NbThemeModule } from '@nebular/theme';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NbThemeModule.forRoot(),
-    NbLayoutModule,
-    NbButtonModule,
+    MatToolbarModule,
     RouterModule,
     AppRoutingModule,
     HttpClientModule
-  ],
-  providers: [
   ],
   bootstrap: [
     AppComponent

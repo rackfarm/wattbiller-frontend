@@ -1,7 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
 @import './scss/theme';
-@import '~@nebular/theme/styles/globals';
+@import './scss/overrides';
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
-@include nb-install() {
-  @include nb-theme-global();
-};
+$wattbiller-typography: mat-typography-config(
+  $font-family: 'Muli, monospace',
+  $body-1: mat-typography-level(16px, 20px, 400)
+);
+@include mat-core($wattbiller-typography);
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #edf1f7;
+  margin: 0;
+}

@@ -1,5 +1,5 @@
-<nb-layout center>
-  <nb-layout-header fixed>
+<div>
+  <mat-toolbar class="header">
     <div class="header-wrapper">
       <div class="logo">
         <img src="/assets/wattbiller_logo.svg">
@@ -11,18 +11,19 @@
         <li>Debitors</li>
       </ul>
     </div>
-  </nb-layout-header>
+  </mat-toolbar>
 
-  <nb-layout-header subheader>
-    <ng-template #subheader></ng-template>
-    <ng-template #titleSubheader let-title>
-      <h2>{{ title }}</h2>
-    </ng-template>
-  </nb-layout-header>
-
-  <nb-layout-column>
+  <div class="content-container">
     <main>
+      <mat-toolbar class="subheader">
+        <ng-template #subheader></ng-template>
+        <ng-template #titleSubheader
+                     let-title>
+          <h2>{{ title }}</h2>
+        </ng-template>
+      </mat-toolbar>
+
       <router-outlet #outlet></router-outlet>
     </main>
-  </nb-layout-column>
-</nb-layout>
+  </div>
+</div>

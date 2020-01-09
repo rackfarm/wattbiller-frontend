@@ -30,19 +30,6 @@ export interface PeriodicStatement extends Dto {
   debitorGroup: DebitorGroup;
 }
 
-export interface UserBill extends Dto {
-  periodName: string;
-  username: string;
-  entries: UserBillEntry;
-  amount: number;
-}
-
-export interface UserBillEntry {
-  meterName: string;
-  cost: number;
-  userBillId: number;
-}
-
 export interface Dto {
  id: number;
 }
